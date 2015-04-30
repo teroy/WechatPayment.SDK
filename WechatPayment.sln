@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatPayment.SDK", "WechatPayment.SDK\WechatPayment.SDK.csproj", "{86A371E1-A088-47F2-B751-88B902E6C40F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatPayment.SDK.UnitTest", "WebchatPayment.SDK.UnitTest\WechatPayment.SDK.UnitTest.csproj", "{E2E5EAD5-FE30-4B00-BACA-C686F69187E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatPayment.SDK.UnitTest", "WechatPayment.SDK.UnitTest\WechatPayment.SDK.UnitTest.csproj", "{E2E5EAD5-FE30-4B00-BACA-C686F69187E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
