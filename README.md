@@ -16,6 +16,25 @@ C#版微信支付SDK（基于.NET Framework 4.0）
    该命名空间下是微信支付异步回调对应的通知类
 
 ###如何使用SDK  
-1. 初始化化配置参数（例如ASP.NET在Global.asax的Application_Start中配置）  
-<code>WechatPaymentConfig.Initalize(secret: "Test1", appId: "Test1", mchId: "Test1", certFilePath: "");</code>  
-2. 调用请求响应流程
+1. 初始化化配置参数（例如ASP.NET在Global.asax的Application_Start中配置）   
+<pre>
+   <code>
+      WechatPaymentConfig.Initalize(
+         secret: "Test1", //商户平台密匙
+         appId: "Test1",  //公众号Id
+         mchId: "Test1",  //商户Id
+         certFilePath: "" //退款API需使用的证书路径
+      );
+   </code>
+</pre>
+2. 执行请求模板  
+<pre>
+   <code>
+      //调用订单查询API
+      OrderQueryRequest request = new OrderQueryRequest
+      {
+         TradeNum = "TEMP"
+      };
+      OrderQueryResponse response = WechatPaymentClient.Excute(request);
+   </code>
+</pre>
