@@ -13,22 +13,19 @@ namespace WechatPayment.SDK.UnitTest.Utility
     public class RandomStringBuliderTest
     {
         [Test]
-        public void Generate_DifferenctStrLengthParameter_ReturnStringLengthIsOk()
+        public void Generate_输入大于0的生成随机数长度_返回参数长度一致()
         {
             //arrange
-            int strLengthNegative  = -1;
-            int strLength0 = 0;
             int strLength32 = 32;
+            int strLength12 = 12;
 
             //act
-            string nonceStrNegative = RandomStringBulider.Generate(strLengthNegative);
-            string nonceStr0 = RandomStringBulider.Generate(strLength0);
             string nonceStr32 = RandomStringBulider.Generate(strLength32);
+            string nonceStr12 = RandomStringBulider.Generate(strLength12);
 
             //assert
-            Assert.IsTrue(nonceStrNegative.Length == 0);
-            Assert.IsTrue(nonceStr0.Length == 0);
             Assert.IsTrue(nonceStr32.Length == 32);
+            Assert.IsTrue(nonceStr32.Length == 12);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace WechatPayment.SDK.UnitTest.Notify
     public class PaymentResultNotifyFeedbackTest
     {
         [Test]
-        public void StandardizeXmlText_Normal_IsOk()
+        public void StandardizeXmlText_传入空字符串或正常字符串_验证标准化的数据正确()
         {
             //arrange     
             PaymentResultNotifyFeedback feedback = new PaymentResultNotifyFeedback();
@@ -28,7 +28,7 @@ namespace WechatPayment.SDK.UnitTest.Notify
         }
 
         [Test]
-        public void GenerateXmlString_Normal_IsOk()
+        public void GenerateXmlString_使用正常feddback对象_生成的Xml字符串正确()
         {
             //arrange     
             PaymentResultNotifyFeedback feedback = new PaymentResultNotifyFeedback();

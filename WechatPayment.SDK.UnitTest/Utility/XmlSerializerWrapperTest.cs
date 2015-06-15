@@ -14,7 +14,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
     public class XmlSerializerWrapperTest
     {
         [Test]
-        public void Deserialize_Normal_ResultOk()
+        public void Deserialize_输入UnifiedOrderResponse对象的xml字符串_解析正确()
         {
             //arrange
             string xmlStr = @"

@@ -18,7 +18,7 @@ namespace WechatPayment.SDK.UnitTest
         [Test]
         [Ignore]
         //HACK(Teroy):这个测试一定要在GlobalTestFixture中的Setup方法中配置正确的信息才可以正确运行
-        public void Excute_OrderQueryRequestTradeNumInputTemp_ResultNotSuccess()
+        public void Excute_传入OrderQueryRequest_执行成功()
         {
             //arrange
             OrderQueryRequest request = new OrderQueryRequest
@@ -34,7 +34,7 @@ namespace WechatPayment.SDK.UnitTest
         }
 
         [Test]
-        public void ToPaymentResultNotify_Normal_ResultOk()
+        public void ToPaymentResultNotify_输入常规的通知Xml字符串_对象转化正确()
         {
             //arrange
             string xmlStr = @"<xml>

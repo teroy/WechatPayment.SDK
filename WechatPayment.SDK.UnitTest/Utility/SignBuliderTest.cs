@@ -13,7 +13,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
     public class SignBuliderTest
     {
         [Test]
-        public void CreateJointStr_Normal_ResultOk()
+        public void CreateJointStr_传入非空排序字典_链接字符串结果正确()
         {
             //arrange
             SortedDictionary<string, string> sortDict = new SortedDictionary<string, string>();

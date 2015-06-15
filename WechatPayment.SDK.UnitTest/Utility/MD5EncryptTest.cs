@@ -13,7 +13,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
     public class MD5EncryptTest
     {
         [Test]
-        public void Generate_Normal_ResultLength32()
+        public void Generate_输入正常的字符串_加密后字符串长度为32位()
         {
             //arrange
             string originalStr = "Test";
@@ -26,7 +26,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
         }
 
         [Test]
-        public void Generate_SameInput_ResultIsSame()
+        public void Generate_输入两次同样的字符串_加密后的字符串相同()
         {
             //arrange
             string originalStr1 = "Test";

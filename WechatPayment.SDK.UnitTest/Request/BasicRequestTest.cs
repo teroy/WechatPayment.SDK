@@ -14,7 +14,7 @@ namespace WechatPayment.SDK.UnitTest.Request
     public class BasicRequestTest
     {
         [Test]
-        public void Validate_ParameterIsFull_NotThrowException()
+        public void Validate_填满UnifiedOrderRequest对象的必备参数_不发生异常()
         {
             //arrange
             UnifiedOrderRequest request = new UnifiedOrderRequest();
@@ -34,7 +34,7 @@ namespace WechatPayment.SDK.UnitTest.Request
         }
 
         [Test]
-        public void Validate_RequireParameterIsEmpty_ThrowException()
+        public void Validate_Request对象的外部属性为空_抛出异常()
         {
             //arrange
             UnifiedOrderRequest request = new UnifiedOrderRequest();
@@ -47,7 +47,7 @@ namespace WechatPayment.SDK.UnitTest.Request
         }
 
         [Test]
-        public void Validate_TradeTypeIsNATIVEProductIdIsEmpty_ThrowException()
+        public void Validate_UnifiedOrderRequest在TradeType为NATIVE和ProductId为空的情况_抛出异常()
         {
             //arrange
             UnifiedOrderRequest request = new UnifiedOrderRequest();
@@ -65,7 +65,7 @@ namespace WechatPayment.SDK.UnitTest.Request
         }
 
         [Test]
-        public void GetParameterDict_Normal_IsOk()
+        public void GetParameterDict_UnifiedOrderRequest输入正常的外部属性_结果匹配()
         {
             //arrange
             UnifiedOrderRequest request = new UnifiedOrderRequest();

@@ -14,7 +14,7 @@ namespace WechatPayment.SDK.UnitTest.Cache
     public class RequestEntityManagerTest
     {
         [Test]
-        public void GetBy_Normal_IsOk()
+        public void GetBy_输入类型参数_返回存储的类型一致()
         {
             //arrange
             Type t = typeof(UnifiedOrderRequest);

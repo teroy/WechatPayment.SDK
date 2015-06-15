@@ -13,7 +13,7 @@ namespace WechatPayment.SDK.UnitTest.Response
     public class BasicResponseTest
     {
         [Test]
-        public void IsSuccess_BasicResponseCodeIsEmpty_ReturnFalse()
+        public void IsSuccess_BasicResponse的Code为空_返回False()
         {
             //arrange
             BasicResponse response = new BasicResponse();
@@ -26,7 +26,7 @@ namespace WechatPayment.SDK.UnitTest.Response
         }
 
         [Test]
-        public void IsSuccess_CodeEqualsSUCCESS_ReturnTrue()
+        public void IsSuccess_BasicResponse的Code为SUCCESS_返回True()
         {
             //arrange
             BasicResponse response = new BasicResponse();

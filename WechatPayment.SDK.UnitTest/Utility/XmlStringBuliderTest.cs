@@ -13,7 +13,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
     public class XmlStringBuliderTest
     {
         [Test]
-        public void Generate_Normal_ResultOk()
+        public void Generate_输入非空的Dictionary_生成的XML字符串正确()
         {
             //arrange
             Dictionary<string, string> dict = new Dictionary<string, string>

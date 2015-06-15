@@ -13,7 +13,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
     public class SortDictionaryConverterTest
     {
         [Test]
-        public void Convert_NormalDictionary_ResultOk()
+        public void Convert_输入非空的Dictionary_转化为SortedDictionary成功()
         { 
             //arrange
             Dictionary<string, string> dict = new Dictionary<string, string>()
