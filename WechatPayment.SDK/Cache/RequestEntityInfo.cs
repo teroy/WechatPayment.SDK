@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Reflection;
 
 namespace WechatPayment.SDK.Cache
 {
     using WechatPayment.SDK.Attritubes;
-    using WechatPayment.SDK.Request;
 
     /// <summary>
     /// 反射获取Request对象的信息基类

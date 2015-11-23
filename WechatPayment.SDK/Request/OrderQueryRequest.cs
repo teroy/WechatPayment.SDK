@@ -12,7 +12,7 @@ namespace WechatPayment.SDK.Request
     /// <summary>
     /// 查询订单Request
     /// </summary>
-    public class OrderQueryRequest:BasicRequest<OrderQueryResponse>
+    public class OrderQueryRequest : BasicRequest<OrderQueryResponse>
     {
         /// <summary>
         /// 查询订单ApiUrl

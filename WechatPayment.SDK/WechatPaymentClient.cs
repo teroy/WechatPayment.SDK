@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WechatPayment.SDK
 {
+    using WechatPayment.SDK.Notify;
     using WechatPayment.SDK.Request;
     using WechatPayment.SDK.Response;
     using WechatPayment.SDK.Utility;
-    using WechatPayment.SDK.Notify;
 
     /// <summary>
     /// 微信支付请求处理器
@@ -22,7 +22,7 @@ namespace WechatPayment.SDK
         /// <typeparam name="T"></typeparam>
         /// <param name="request"></param>
         /// <returns></returns>
-        public static T Excute<T>(BasicRequest<T> request) where T:BasicResponse
+        public static T Excute<T>(BasicRequest<T> request) where T : BasicResponse
         {
             //设置request对象的随机字符串
             request.NonceStr = RandomStringBulider.Generate(32);
@@ -48,7 +48,7 @@ namespace WechatPayment.SDK
 
             //7.提交请求到微信服务器，获取响应的字符串
             //HACK(Teroy):退款API在POST的时候要带证书,其他API请求不用
-            string responseXml = request.IsPostRequireCertificate ? 
+            string responseXml = request.IsPostRequireCertificate ?
                 HttpRequestWrapper.PostXmlWithCertificate(request.ApiUrl, requestXml) : HttpRequestWrapper.PostXml(request.ApiUrl, requestXml);
 
             //8.将响应的XML数据实例化为T类型

@@ -9,7 +9,7 @@ namespace WechatPayment.SDK.Attritubes
     /// <summary>
     /// 请求参数特性
     /// </summary>
-    public class RequestParameterAttribute:Attribute
+    public class RequestParameterAttribute : Attribute
     {
         /// <summary>
         /// 请求参数名称
@@ -26,7 +26,6 @@ namespace WechatPayment.SDK.Attritubes
         /// </summary>
         private RequestParameterAttribute()
         {
-
         }
 
         /// <summary>
@@ -34,7 +33,7 @@ namespace WechatPayment.SDK.Attritubes
         /// </summary>
         /// <param name="name">请求参数名称</param>
         /// <param name="isRequire">请求参数是否必须标记</param>
-        public RequestParameterAttribute(string name,bool isRequire = false)
+        public RequestParameterAttribute(string name, bool isRequire = false)
         {
             Name = name;
             IsRequire = isRequire;

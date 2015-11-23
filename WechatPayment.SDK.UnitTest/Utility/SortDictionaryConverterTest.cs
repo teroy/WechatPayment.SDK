@@ -1,9 +1,9 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
 
 namespace WechatPayment.SDK.UnitTest.Utility
 {
@@ -14,7 +14,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
     {
         [Test]
         public void Convert_输入非空的Dictionary_转化为SortedDictionary成功()
-        { 
+        {
             //arrange
             Dictionary<string, string> dict = new Dictionary<string, string>()
             {

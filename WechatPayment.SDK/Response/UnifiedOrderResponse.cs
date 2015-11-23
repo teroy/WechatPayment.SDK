@@ -11,7 +11,7 @@ namespace WechatPayment.SDK.Response
     /// 统一下单Reponse
     /// </summary>
     [XmlRoot("xml")]
-    public class UnifiedOrderResponse:BasicResponse
+    public class UnifiedOrderResponse : BasicResponse
     {
         /// <summary>
         /// 公众号Id

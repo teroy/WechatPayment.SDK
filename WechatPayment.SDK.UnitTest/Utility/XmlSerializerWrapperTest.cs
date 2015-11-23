@@ -1,9 +1,9 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
 
 namespace WechatPayment.SDK.UnitTest.Utility
 {
@@ -29,7 +29,7 @@ namespace WechatPayment.SDK.UnitTest.Utility
                                 <prepay_id><![CDATA[wx201411101639507cbf6ffd8b0779950874]]></prepay_id>
                                 <trade_type><![CDATA[JSAPI]]></trade_type>
                             </xml>";
-            
+
             //act
             UnifiedOrderResponse target = XmlSerializerWrapper.Deserialize<UnifiedOrderResponse>(xmlStr);
 

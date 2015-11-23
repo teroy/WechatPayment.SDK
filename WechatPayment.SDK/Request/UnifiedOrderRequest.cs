@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace WechatPayment.SDK.Request
 {
-    using WechatPayment.SDK;
     using WechatPayment.SDK.Attritubes;
-    using WechatPayment.SDK.Response;
-    using WechatPayment.SDK.Utility;
     using WechatPayment.SDK.Exceptions;
+    using WechatPayment.SDK.Response;
 
     /// <summary>
     /// 统一下单Request
     /// </summary>
-    public class UnifiedOrderRequest:BasicRequest<UnifiedOrderResponse>
+    public class UnifiedOrderRequest : BasicRequest<UnifiedOrderResponse>
     {
         /// <summary>
         /// 统一下单ApiUrl
@@ -51,7 +49,7 @@ namespace WechatPayment.SDK.Request
         /// <summary>
         /// 商品或支付单间要描述
         /// </summary>
-        [RequestParameter("body",true)]
+        [RequestParameter("body", true)]
         public string Desc { get; set; }
 
         /// <summary>
@@ -69,7 +67,7 @@ namespace WechatPayment.SDK.Request
         /// <summary>
         /// 商户系统内部订单号
         /// </summary>
-        [RequestParameter("out_trade_no",true)]
+        [RequestParameter("out_trade_no", true)]
         public string TradeNum { get; set; }
 
         /// <summary>
@@ -81,13 +79,13 @@ namespace WechatPayment.SDK.Request
         /// <summary>
         /// 订单总金额
         /// </summary>
-        [RequestParameter("total_fee",true)]
+        [RequestParameter("total_fee", true)]
         public int? TotalFee { get; set; }
 
         /// <summary>
         /// 终端IP
         /// </summary>
-        [RequestParameter("spbill_create_ip",true)]
+        [RequestParameter("spbill_create_ip", true)]
         public string SpbillCreateIp { get; set; }
 
         /// <summary>
@@ -118,7 +116,7 @@ namespace WechatPayment.SDK.Request
         /// 交易类型
         /// <example>JSAPI|NATIVE|APP|WAP</example>
         /// </summary>
-        [RequestParameter("trade_type",true)]
+        [RequestParameter("trade_type", true)]
         public string TradeType { get; set; }
 
         /// <summary>

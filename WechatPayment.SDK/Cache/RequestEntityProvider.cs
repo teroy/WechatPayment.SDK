@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace WechatPayment.SDK.Cache
 {
     using WechatPayment.SDK.Attritubes;
-    using WechatPayment.SDK.Request;
 
     /// <summary>
     /// RequestEntity提供器

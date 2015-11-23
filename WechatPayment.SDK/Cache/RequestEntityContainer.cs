@@ -17,7 +17,7 @@ namespace WechatPayment.SDK.Cache
         /// key:Request对象的FullName
         /// value:Request对象的反射信息
         /// </summary>
-        private static readonly Dictionary<string, RequestEntityInfo> DATA_DICT = new Dictionary<string,RequestEntityInfo>();
+        private static readonly Dictionary<string, RequestEntityInfo> DATA_DICT = new Dictionary<string, RequestEntityInfo>();
 
         /// <summary>
         /// 判断Request对象的反射信息是否在缓存字典中

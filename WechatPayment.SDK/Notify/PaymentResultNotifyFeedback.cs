@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace WechatPayment.SDK.Notify
 {
@@ -13,7 +12,7 @@ namespace WechatPayment.SDK.Notify
     public class PaymentResultNotifyFeedback
     {
         /// <summary>
-        /// 返回状态码 
+        /// 返回状态码
         /// <example>SUCCESS | FAIL</example>
         /// </summary>
         public string ReturnCode { get; set; }

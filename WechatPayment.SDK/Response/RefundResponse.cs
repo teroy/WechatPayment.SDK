@@ -11,7 +11,7 @@ namespace WechatPayment.SDK.Response
     /// 退款申请Response
     /// </summary>
     [XmlRoot("xml")]
-    public class RefundResponse:BasicResponse
+    public class RefundResponse : BasicResponse
     {
         /// <summary>
         /// 业务结果

@@ -12,7 +12,7 @@ namespace WechatPayment.SDK.Request
     /// <summary>
     /// 退款单申请Request
     /// </summary>
-    public class RefundRequest:BasicRequest<RefundResponse>
+    public class RefundRequest : BasicRequest<RefundResponse>
     {
         /// <summary>
         /// 退款单申请ApiUrl
@@ -33,13 +33,13 @@ namespace WechatPayment.SDK.Request
         /// <summary>
         /// 微信订单号
         /// </summary>
-        [RequestParameter("transaction_id",true)]
+        [RequestParameter("transaction_id", true)]
         public string TransactionId { get; set; }
 
         /// <summary>
         /// 商户系统内部的订单号
         /// </summary>
-        [RequestParameter("out_trade_no",true)]
+        [RequestParameter("out_trade_no", true)]
         public string TradeNum { get; set; }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace WechatPayment.SDK.Request
         /// <summary>
         /// 退款总金额
         /// </summary>
-        [RequestParameter("refund_fee",true)]
+        [RequestParameter("refund_fee", true)]
         public int? RefundFee { get; set; }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace WechatPayment.SDK.Request
         /// <summary>
         /// 退款操作员（默认为商户号）
         /// </summary>
-        [RequestParameter("op_user_id",true)]
+        [RequestParameter("op_user_id", true)]
         public string OperationUserId { get; set; }
     }
 }

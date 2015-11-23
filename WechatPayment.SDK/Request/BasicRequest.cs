@@ -8,15 +8,14 @@ namespace WechatPayment.SDK.Request
 {
     using WechatPayment.SDK.Attritubes;
     using WechatPayment.SDK.Cache;
-    using WechatPayment.SDK.Response;
     using WechatPayment.SDK.Exceptions;
-    using WechatPayment.SDK.Utility;
+    using WechatPayment.SDK.Response;
 
     /// <summary>
     /// Request基础对象
     /// </summary>
     /// <typeparam name="T">继承于BasicResponse的类</typeparam>
-    public abstract class BasicRequest<T> where T:BasicResponse
+    public abstract class BasicRequest<T> where T : BasicResponse
     {
         /// <summary>
         /// 访问微信支付的Url
@@ -63,7 +62,7 @@ namespace WechatPayment.SDK.Request
                 RequestParameterAttribute parameterAttritube = item.Value;
                 if (parameterAttritube.IsRequire)
                 {
-                    int piIndex = requestEntityInfo.RequestIndexDict[propertyName];                   
+                    int piIndex = requestEntityInfo.RequestIndexDict[propertyName];
                     object o = requestEntityInfo.PiArray[piIndex].GetValue(this, null);
                     if (o == null || o.ToString() == string.Empty)
                     {

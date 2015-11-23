@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Security;
-using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace WechatPayment.SDK.Utility
 {
@@ -64,7 +64,7 @@ namespace WechatPayment.SDK.Utility
             //生成HttpWebResponse对象
             HttpWebResponse webResponse = webRequest.GetResponse() as HttpWebResponse;
             string result = string.Empty;
-            using (StreamReader reader = new StreamReader(webResponse.GetResponseStream(),Encoding.UTF8))
+            using (StreamReader reader = new StreamReader(webResponse.GetResponseStream(), Encoding.UTF8))
             {
                 result = reader.ReadToEnd();
             }

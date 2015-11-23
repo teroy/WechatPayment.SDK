@@ -1,14 +1,14 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
 
 namespace WechatPayment.SDK.UnitTest.Request
 {
-    using WechatPayment.SDK.Request;
     using WechatPayment.SDK.Exceptions;
+    using WechatPayment.SDK.Request;
 
     [TestFixture]
     public class BasicRequestTest
@@ -26,11 +26,10 @@ namespace WechatPayment.SDK.UnitTest.Request
             request.NotifyUrl = "www.baidu.com";
             request.NonceStr = "123456789";
 
-            //act  
+            //act
             request.Validate();
 
-            //assert    
-            
+            //assert
         }
 
         [Test]
@@ -56,7 +55,7 @@ namespace WechatPayment.SDK.UnitTest.Request
             request.TotalFee = 100;
             request.SpbillCreateIp = "Temp";
             request.TradeType = "NATIVE";
-  
+
             //act
             TestDelegate testDelegate = () => request.Validate();
 
@@ -85,6 +84,6 @@ namespace WechatPayment.SDK.UnitTest.Request
             Assert.IsTrue(target["total_fee"] == "100");
             Assert.IsTrue(target["spbill_create_ip"] == "SpbillCreateIp");
             Assert.IsTrue(target["trade_type"] == "TradeType");
-        } 
+        }
     }
 }
