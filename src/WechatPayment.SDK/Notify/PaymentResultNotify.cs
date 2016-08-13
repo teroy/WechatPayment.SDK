@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace WechatPayment.SDK.Notify
+{
+    /// <summary>
+    /// 微信支付异步结果通知
+    /// </summary>
+    [XmlRoot("xml")]
+    public class PaymentResultNotify
+    {
+        /// <summary>
+        /// 状态码
+        /// <example>SUCCESS/FAIL</example>
+        /// </summary>
+        [XmlElement("return_code")]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// 错误描述信息
+        /// </summary>
+        [XmlElement("return_msg")]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// 公众号Id
+        /// </summary>
+        [XmlElement("appid")]
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// 商户号
+        /// </summary>
+        [XmlElement("mch_id")]
+        public string MerchantId { get; set; }
+
+        /// <summary>
+        /// 设备号
+        /// </summary>
+        [XmlElement("device_info")]
+        public string DeviceInfo { get; set; }
+
+        /// <summary>
+        /// 随机字符串
+        /// </summary>
+        [XmlElement("nonce_str")]
+        public string NonceStr { get; set; }
+
+        /// <summary>
+        /// 签名
+        /// </summary>
+        [XmlElement("sign")]
+        public string Sign { get; set; }
+
+        /// <summary>
+        /// 业务结果
+        /// </summary>
+        [XmlElement("result_code")]
+        public string ResultCode { get; set; }
+
+        /// <summary>
+        /// 错误代码
+        /// </summary>
+        [XmlElement("err_code")]
+        public string ErrorCode { get; set; }
+
+        /// <summary>
+        /// 错误代码描述
+        /// </summary>
+        [XmlElement("err_code_des")]
+        public string ErrorCodeDesc { get; set; }
+
+        /// <summary>
+        /// 用户标识
+        /// </summary>
+        [XmlElement("openid")]
+        public string OpenId { get; set; }
+
+        /// <summary>
+        /// 是否关注公众账号
+        /// </summary>
+        [XmlElement("is_subscribe")]
+        public string IsSubscribe { get; set; }
+
+        /// <summary>
+        /// 交易类型
+        /// </summary>
+        [XmlElement("trade_type")]
+        public string TradeType { get; set; }
+
+        /// <summary>
+        /// 付款银行
+        /// </summary>
+        [XmlElement("bank_type")]
+        public string BankType { get; set; }
+
+        /// <summary>
+        /// 订单总金额
+        /// </summary>
+        [XmlElement("total_fee")]
+        public int? TotalFee { get; set; }
+
+        /// <summary>
+        /// 货币种类
+        /// </summary>
+        [XmlElement("fee_type")]
+        public string FeeType { get; set; }
+
+        /// <summary>
+        /// 现金支付金额
+        /// </summary>
+        [XmlElement("cash_fee")]
+        public int? CashFee { get; set; }
+
+        /// <summary>
+        /// 现金支付货币类型
+        /// </summary>
+        [XmlElement("cash_fee_type")]
+        public string CashFeeType { get; set; }
+
+        /// <summary>
+        /// 代金券或立减优惠金额
+        /// </summary>
+        [XmlElement("coupon_fee")]
+        public string CouponFee { get; set; }
+
+        /// <summary>
+        /// 代金券或立减优惠使用数量
+        /// </summary>
+        [XmlElement("coupon_count")]
+        public int? CouponCount { get; set; }
+
+        /// <summary>
+        /// 微信支付订单号
+        /// </summary>
+        [XmlElement("transaction_id")]
+        public string TransactionId { get; set; }
+
+        /// <summary>
+        /// 商户系统的订单号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string TradeNum { get; set; }
+
+        /// <summary>
+        /// 商家数据包
+        /// </summary>
+        [XmlElement("attach")]
+        public string Attach { get; set; }
+
+        /// <summary>
+        /// 订单支付时间
+        /// </summary>
+        [XmlElement("time_end")]
+        public string TimeEnd { get; set; }
+
+        /// <summary>
+        /// 结果是否成功标记
+        /// </summary>
+        public bool IsResultSuccess { get { return ResultCode == "SUCCESS"; } }
+    }
+}
