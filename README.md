@@ -1,11 +1,11 @@
 ## WechatPayment.SDK
 C#版微信支付SDK（基于.NET Framework 4.0）
-###目前已支持的API情况 
+### 目前已支持的API情况 
 1. 统一下单API  
 2. 订单查询API  
 3. 申请退款API  
 
-###客户端调用SDK涉及的命名空间
+### 客户端调用SDK涉及的命名空间
 1. WechatPayment.SDK  
    该命名空间下是微信支付调用的核心类：WechatPaymentConfig和WechatPaymentClient
 2. WechatPayment.SDK.Request  
@@ -15,7 +15,7 @@ C#版微信支付SDK（基于.NET Framework 4.0）
 4. WechatPayment.SDK.Notify  
    该命名空间下是微信支付异步回调对应的通知类
 
-###如何使用SDK  
+### 如何使用SDK  
 1. 初始化化配置参数（例如ASP.NET在Global.asax的Application_Start中配置）   
 <pre>
    <code>
